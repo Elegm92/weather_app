@@ -1,9 +1,20 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
+function groupByDay(list) {
+  return list.reduce((acc, item) => {
+    const day = item.dt_txt.split(" ")[0];
+    if (!acc[day]) acc[day] = [];
+    acc[day].push(item);
+    return acc;
+  }, {});
+}
+
 function App() {
+  const [forecast, setForecast] = useState({});
+
   useEffect(() => {
     axios.get("https://api.openweathermap.org/data/2.5/forecast", {
       params: {
@@ -13,7 +24,9 @@ function App() {
         lang: "es",
       },
     }).then(({ data }) => {
-      console.log(data);
+      const grouped = groupByDay(data.list);
+      setForecast(grouped);
+      console.log(grouped);
     });
   }, []);
 
