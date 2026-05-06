@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherList from "./WeatherList";
+import SearchForm from "./SearchForm";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -14,12 +15,13 @@ function groupByDay(list) {
 }
 
 function App() {
+  const [city,setCity] = useState("Madrid");
   const [forecast, setForecast] = useState({});
 
   useEffect(() => {
     axios.get("https://api.openweathermap.org/data/2.5/forecast", {
       params: {
-        q: "Madrid",
+        q: city,
         appid: API_KEY,
         units: "metric",
         lang: "es",
@@ -28,12 +30,13 @@ function App() {
       const grouped = groupByDay(data.list);
       setForecast(grouped);
     });
-  }, []);
+  }, [city]);
 
   return (
     <div>
       <h1>Weather App</h1>
-      {Object.keys(forescast).length > 0 && <WeatherList forecast={forecast}/>}
+      <SearchForm onSearch={(city)=> setCity(city)} />
+      {Object.keys(forecast).length > 0 && <WeatherList forecast={forecast}/>}
     </div>
   );
 }
