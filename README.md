@@ -1,4 +1,4 @@
-# 🌤 Weather App
+# Weather App
 
 Aplicación del tiempo desarrollada con React y Vite que muestra el pronóstico extendido de los próximos 5 días para cualquier ciudad del mundo.
 
