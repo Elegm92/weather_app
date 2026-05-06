@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import WeatherList from "./WeatherList";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -26,13 +27,13 @@ function App() {
     }).then(({ data }) => {
       const grouped = groupByDay(data.list);
       setForecast(grouped);
-      console.log(grouped);
     });
   }, []);
 
   return (
     <div>
       <h1>Weather App</h1>
+      {Object.keys(forescast).length > 0 && <WeatherList forecast={forecast}/>}
     </div>
   );
 }
