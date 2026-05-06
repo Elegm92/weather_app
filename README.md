@@ -1,18 +1,26 @@
-# React + Vite
+# 🌤 Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación del tiempo desarrollada con React y Vite que muestra el pronóstico extendido de los próximos 5 días para cualquier ciudad del mundo.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Pronóstico extendido de 5 días con franjas horarias cada 3 horas
+- Búsqueda de cualquier ciudad del mundo
+- Iconos del estado del tiempo
+- Por defecto muestra el pronóstico de Madrid
 
-## React Compiler
+## Tecnologías
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React
+- Vite
+- Axios
+- OpenWeatherMap API
+- UUID
 
-Note: This will impact Vite dev & build performances.
+## Instalación
 
-## Expanding the ESLint configuration
+1. Clona el repositorio
+2. Instala las dependencias con `npm install`
+3. Crea un archivo `.env` en la raíz con tu API key de OpenWeatherMap.
+4. Ejecuta el proyecto con `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
