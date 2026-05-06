@@ -1,0 +1,24 @@
+:root {
+  --color-bg-1: #1a1a2e;
+  --color-bg-2: #16213e;
+  --color-bg-3: #0f3460;
+  --color-primary: #e94560;
+  --color-text: #ffffff;
+  --color-card-bg: rgba(255, 255, 255, 0.05);
+  --color-card-border: rgba(255, 255, 255, 0.1);
+  --border-radius: 12px;
+  --padding-card: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--color-bg-1), var(--color-bg-2), var(--color-bg-3));
+  min-height: 100vh;
+  color: var(--color-text);
+}
