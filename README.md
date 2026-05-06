@@ -8,7 +8,7 @@ Aplicación del tiempo desarrollada con React y Vite que muestra el pronóstico 
 
 ---
 
-## ✨ Características
+## Características
 
 - Pronóstico extendido de 5 días con franjas horarias cada 3 horas
 - Búsqueda de cualquier ciudad del mundo
@@ -18,7 +18,7 @@ Aplicación del tiempo desarrollada con React y Vite que muestra el pronóstico 
 
 ---
 
-## 🛠 Tecnologías
+## Tecnologías
 
 | Tecnología | Uso |
 |------------|-----|
@@ -30,7 +30,7 @@ Aplicación del tiempo desarrollada con React y Vite que muestra el pronóstico 
 
 ---
 
-## ⚙️ Instalación
+## Instalación
 
 1. Clona el repositorio
 
